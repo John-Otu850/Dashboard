@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1>Dashboard</h1>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#" class="active"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#"><i class="fas fa-chart-bar"></i> Analytics</a></li>
+                    <li><a href="#"><i class="fas fa-users"></i> Users</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <header class="top-bar">
+                <button id="sidebar-toggle" class="sidebar-toggle">☰</button>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="user-profile">
+                    <img src="Images/oj.jpg" alt="User Avatar">
+                    <span>O Jay</span>
+                </div>
+            </header>
+            <div class="content">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Total Users</h3>
+                        <p class="stat-number">1,234</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Revenue</h3>
+                        <p class="stat-number">$5,678</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Active Sessions</h3>
+                        <p class="stat-number">321</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Conversion Rate</h3>
+                        <p class="stat-number">12.3%</p>
+                    </div>
+                </div>
+                <div class="recent-activity">
+                    <h2>Recent Activity</h2>
+                    <ul>
+                        <li>User John signed up</li>
+                        <li>Product X was purchased</li>
+                        <li>New comment on Blog Post Y</li>
+                        <li>User Jane updated their profile</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <script>
+        document.getElementById('sidebar-toggle').addEventListener('click', function() {
+            document.querySelector('.dashboard').classList.toggle('sidebar-collapsed');
+        });
+    </script>
+</body>
+</html>
+
